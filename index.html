@@ -1,1010 +1,789 @@
-
-  <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en" class="h-full">
-    <head>
-      <meta charset="UTF-8" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>FarMaa – Fresh & Organic</title>
-    <!-- Tailwind CSS via CDN for standalone HTML -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Font Awesome for icons -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <style>
-      @keyframes float {
-        0%,
-        100% {
-          transform: translateY(0px);
-        }
-        50% {
-          transform: translateY(-20px);
-        }
-      }
-      .animate-float {
-        animation: float 3s ease-in-out infinite;
-      }
-    </style>
-    </head>
 
-  <body class="min-h-full bg-white text-slate-900">
-    <!-- HEADER -->
-    <header
-      class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-gray-200 shadow-sm"
-    >
-      <div class="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
-        <!-- Logo -->
-        <div class="flex items-center gap-2">
-          
-          <img src="https://i.postimg.cc/5t5mBcqS/Far-Maa.png" alt="FarMaa" class="h-14 w-14" />
-          
-          <div>
-            <div class="text-xl text-[#2d5d2d]">FarMaa</div>
-            <div class="text-xs text-[#a4d65e]">Fresh &amp; Organic</div>
-          </div>
-        </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FarMaa – Fresh & Organic</title>
+  <!-- Tailwind CSS via CDN for standalone HTML -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    @keyframes float {
 
-        <!-- Actions (static, no JS menu) -->
-        <div class="flex items-center gap-4">
-          <button
-            id="profile-button"
-            class="hidden sm:flex text-gray-700 hover:text-[#2d5d2d] p-2 rounded-full"
-            aria-label="Account"
-          >
-            <i class="fa-regular fa-user text-lg"></i>
-          </button>
-          <a
-            href="#products"
-            class="hidden md:inline-flex bg-[#2d5d2d] hover:bg-[#1f4020] text-white rounded-full px-5 py-2 text-sm items-center justify-center"
-          >
-            Order Now
-          </a>
+      0%,
+      100% {
+        transform: translateY(0px);
+      }
+
+      50% {
+        transform: translateY(-20px);
+      }
+    }
+
+    .animate-float {
+      animation: float 3s ease-in-out infinite;
+    }
+  </style>
+</head>
+
+<body class="min-h-full bg-white text-slate-900">
+  <!-- HEADER -->
+  <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-gray-200 shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
+      <!-- Logo -->
+      <div class="flex items-center gap-2">
+
+        <img src="https://i.postimg.cc/5t5mBcqS/Far-Maa.png" alt="FarMaa" class="h-14 w-14" />
+
+        <div>
+          <div class="text-xl text-[#2d5d2d]">FarMaa</div>
+          <div class="text-xs text-[#a4d65e]">Fresh &amp; Organic</div>
         </div>
       </div>
-    </header>
 
-    <main>
-      <!-- HERO -->
-      <section
-        id="home"
-        class="relative bg-gradient-to-br from-[#c5e3d8] via-[#d4ede4] to-[#e8f5ef] py-20 px-4 overflow-hidden"
-      >
-        <div
-          class="absolute top-10 right-10 w-32 h-32 bg-[#a4d65e]/20 rounded-full blur-3xl"
-        ></div>
-        <div
-          class="absolute bottom-10 left-10 w-40 h-40 bg-[#2d5d2d]/10 rounded-full blur-3xl"
-        ></div>
-
-        <div class="max-w-6xl mx-auto relative">
-          <div class="flex flex-col md:flex-row items-center gap-12">
-            <!-- Left -->
-            <div class="flex-1 text-center md:text-left">
-              <h1 class="text-4xl md:text-6xl mb-6 text-[#2d5d2d]">
-                Fresh Fruits &amp; Vegetables
-                <span class="block text-[#a4d65e]"
-                  >From Farmer to Your Place</span
-                >
-              </h1>
-              <p
-                class="text-lg md:text-xl text-gray-700 mb-8 max-w-2xl mx-auto md:mx-0"
-              >
-                Experience the joy of farm-fresh produce delivered directly to
-                your place. We eliminate middlemen to bring you the freshest
-                quality at unbeatable prices.
-              </p>
-              <div
-                class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start"
-              >
-                <a
-                  href="#products"
-                  class="inline-flex bg-[#2d5d2d] hover:bg-[#1f4020] text-white px-8 py-3 rounded-full text-sm font-medium items-center justify-center"
-                >
-                  Order Now
-                </a>
-                <button
-                  class="border-2 border-[#2d5d2d] text-[#2d5d2d] hover:bg-[#2d5d2d] hover:text-white px-8 py-3 rounded-full text-sm font-medium"
-                >
-                  Learn More
-                </button>
-              </div>
-              <div
-                class="grid grid-cols-3 gap-6 mt-12 max-w-md mx-auto md:mx-0"
-              >
-                <div class="text-center md:text-left">
-                  <div class="text-3xl text-[#2d5d2d] mb-1">10+</div>
-                  <div class="text-sm text-gray-600">Happy Customers</div>
-                </div>
-                <div class="text-center md:text-left">
-                  <div class="text-3xl text-[#2d5d2d] mb-1">15+</div>
-                  <div class="text-sm text-gray-600">Partner Farms</div>
-                </div>
-                <div class="text-center md:text-left">
-                  <div class="text-3xl text-[#2d5d2d] mb-1">100%</div>
-                  <div class="text-sm text-gray-600">Fresh &amp; Organic</div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Right -->
-            <div class="flex-1 flex justify-center">
-              <div class="relative">
-                <div
-                  class="absolute inset-0 bg-gradient-to-br from-[#c5e3d8]/30 to-[#d4ede4]/30 rounded-full blur-2xl"
-                ></div>
-                <img
-                  data-logo="farmaa"
-                  src="https://i.postimg.cc/5t5mBcqS/Far-Maa.png"
-                  alt="FarMaa - Fresh &amp; Organic"
-                  class="relative w-80 h-80 md:w-96 md:h-96 object-contain drop-shadow-2xl animate-float bg-gradient-to-br from-[#c5e3d8]/50 to-[#d4ede4]/50 rounded-full p-4"
-                />
-                <script>
-                  // Use the already-embedded header PNG as the hero image source
-                  (function(){
-                    const headerImg = document.querySelector('header img');
-                    const heroImg = document.querySelector('img[data-logo="farmaa"]');
-                    if(headerImg && heroImg) heroImg.src = headerImg.src;
-                  })();
-                </script>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- FEATURES -->
-      <section id="features" class="py-20 px-4 bg-white">
-        <div class="max-w-6xl mx-auto">
-          <div class="text-center mb-16">
-            <h2 class="text-3xl md:text-5xl text-[#2d5d2d] mb-4">
-              Why Choose FarMaa?
-            </h2>
-            <p class="text-lg text-gray-600 max-w-2xl mx-auto">
-              We're revolutionizing the way fresh produce reaches your table
-            </p>
-          </div>
-
-          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <!-- Feature 1 -->
-            <div
-              class="group p-6 rounded-2xl bg-gradient-to-br from-[#c5e3d8]/20 to-white border border-[#c5e3d8] hover:shadow-xl transition-all duration-300 hover:-translate-y-2"
-            >
-              <div
-                class="w-14 h-14 rounded-full flex items-center justify-center mb-4"
-                style="background-color: #2d5d2d15"
-              >
-                <i class="fa-solid fa-tags text-xl text-[#2d5d2d]"></i>
-              </div>
-              <h3 class="text-xl text-[#2d5d2d] mb-3">Lower Prices</h3>
-              <p class="text-gray-600">
-                Direct sourcing from farmers means no middlemen markup. Save up
-                to 30% on your grocery bills.
-              </p>
-            </div>
-
-            <!-- Feature 2 -->
-            <div
-              class="group p-6 rounded-2xl bg-gradient-to-br from-[#c5e3d8]/20 to-white border border-[#c5e3d8] hover:shadow-xl transition-all duration-300 hover:-translate-y-2"
-            >
-              <div
-                class="w-14 h-14 rounded-full flex items-center justify-center mb-4"
-                style="background-color: #a4d65e15"
-              >
-                <i class="fa-solid fa-leaf text-xl text-[#4b9b3b]"></i>
-              </div>
-              <h3 class="text-xl text-[#2d5d2d] mb-3">Fresh &amp; Organic</h3>
-              <p class="text-gray-600">
-                Handpicked produce harvested at peak freshness. 100% organic and
-                chemical-free.
-              </p>
-            </div>
-
-            <!-- Feature 3 -->
-            <div
-              class="group p-6 rounded-2xl bg-gradient-to-br from-[#c5e3d8]/20 to-white border border-[#c5e3d8] hover:shadow-xl transition-all duration-300 hover:-translate-y-2"
-            >
-              <div
-                class="w-14 h-14 rounded-full flex items-center justify-center mb-4"
-                style="background-color: #2d5d2d15"
-              >
-                <i class="fa-solid fa-truck-fast text-xl text-[#2d5d2d]"></i>
-              </div>
-              <h3 class="text-xl text-[#2d5d2d] mb-3">Fast Delivery</h3>
-              <p class="text-gray-600">
-                Same-day delivery to your doorstep.
-              </p>
-            </div>
-
-            <!-- Feature 4 -->
-            <div
-              class="group p-6 rounded-2xl bg-gradient-to-br from-[#c5e3d8]/20 to-white border border-[#c5e3d8] hover:shadow-xl transition-all duration-300 hover:-translate-y-2"
-            >
-              <div
-                class="w-14 h-14 rounded-full flex items-center justify-center mb-4"
-                style="background-color: #a4d65e15"
-              >
-                <i class="fa-solid fa-shield-heart text-xl text-[#4b9b3b]"></i>
-              </div>
-              <h3 class="text-xl text-[#2d5d2d] mb-3">Quality Guaranteed</h3>
-              <p class="text-gray-600">
-                Rigorous quality checks ensure only the best produce reaches
-                you. 100% satisfaction guaranteed.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- HOW IT WORKS -->
-      <section
-        id="how-it-works"
-        class="py-20 px-4 bg-gradient-to-br from-[#2d5d2d] to-[#1f4020]"
-      >
-        <div class="max-w-6xl mx-auto">
-          <div class="text-center mb-16">
-            <h2 class="text-3xl md:text-5xl text-white mb-4">How It Works</h2>
-            <p class="text-lg text-[#c5e3d8] max-w-2xl mx-auto">
-              From farm to your table in 3 simple steps
-            </p>
-          </div>
-
-          <div class="grid grid-cols-1 md:grid-cols-3 gap-8 relative">
-            <!-- Step 1 -->
-            <div class="relative">
-              <div
-                class="hidden lg:block absolute top-12 left-[60%] w-[80%] h-0.5 bg-[#a4d65e]/30"
-              ></div>
-              <div
-                class="relative bg-white/10 backdrop-blur-sm p-6 rounded-2xl border border-white/20 hover:bg-white/20 transition-all duration-300"
-              >
-                <div class="flex flex-col items-center text-center">
-                  <div
-                    class="w-16 h-16 rounded-full bg-[#a4d65e] flex items-center justify-center mb-4"
-                  >
-                    <i class="fa-regular fa-hand-pointer text-3xl text-[#2d5d2d]"></i>
-                  </div>
-                  <div class="text-4xl text-[#a4d65e] mb-2">01</div>
-                  <h3 class="text-xl text-white mb-3">Place Your Order</h3>
-                  <p class="text-[#c5e3d8]">
-                    Browse our fresh selection and order online in minutes
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <!-- Step 2 -->
-            <div class="relative">
-              <div
-                class="hidden lg:block absolute top-12 left-[60%] w-[80%] h-0.5 bg-[#a4d65e]/30"
-              ></div>
-              <div
-                class="relative bg-white/10 backdrop-blur-sm p-6 rounded-2xl border border-white/20 hover:bg-white/20 transition-all duration-300"
-              >
-                <div class="flex flex-col items-center text-center">
-                  <div
-                    class="w-16 h-16 rounded-full bg-[#a4d65e] flex items-center justify-center mb-4"
-                  >
-                    <i class="fa-solid fa-box-open text-3xl text-[#2d5d2d]"></i>
-                  </div>
-                  <div class="text-4xl text-[#a4d65e] mb-2">02</div>
-                  <h3 class="text-xl text-white mb-3">
-                    FarMaa Packs Your Order
-                  </h3>
-                  <p class="text-[#c5e3d8]">
-                    We carefully pack your order ensuring quality and freshness
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <!-- Step 3 -->
-            <div class="relative">
-              <div
-                class="relative bg-white/10 backdrop-blur-sm p-6 rounded-2xl border border-white/20 hover:bg-white/20 transition-all duration-300"
-              >
-                <div class="flex flex-col items-center text-center">
-                  <div
-                    class="w-16 h-16 rounded-full bg-[#a4d65e] flex items-center justify-center mb-4"
-                  >
-                    <i class="fa-solid fa-truck-ramp-box text-3xl text-[#2d5d2d]"></i>
-                  </div>
-                  <div class="text-4xl text-[#a4d65e] mb-2">03</div>
-                  <h3 class="text-xl text-white mb-3">Delivered to You</h3>
-                  <p class="text-[#c5e3d8]">
-                    Fresh produce delivered straight to your doorstep
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- PRODUCTS / ORDER FORM -->
-      <section id="products" class="py-20 px-4 bg-[#f9fcf9]">
-        <div class="max-w-7xl mx-auto">
-          <!-- WhatsApp bar -->
-          <div
-            class="mb-12 bg-gradient-to-r from-[#a4d65e] to-[#2d5d2d] rounded-2xl p-6 flex flex-col md:flex-row items-center justify-between gap-4 shadow-lg"
-          >
-            <div class="text-white text-center md:text-left">
-              <h3 class="text-xl md:text-2xl mb-1">
-                Need Help with Your Order?
-              </h3>
-              <p class="text-white/90">
-                Chat with us on WhatsApp for instant assistance
-              </p>
-            </div>
-            <a
-              href="https://wa.me/919699956388"
-              target="_blank"
-              rel="noreferrer"
-              class="bg-white text-[#2d5d2d] hover:bg-gray-100 px-6 py-3 rounded-full text-sm font-medium shadow-md"
-            >
-              Connect on WhatsApp
-            </a>
-          </div>
-
-          <div class="text-center mb-16">
-            <h2 class="text-3xl md:text-5xl text-[#2d5d2d] mb-4">
-              Place Your Order
-            </h2>
-            <p class="text-lg text-gray-600 max-w-2xl mx-auto">
-              Add the items you need with quantity and send your order to us on
-              WhatsApp.
-            </p>
-          </div>
-
-          <div
-            class="max-w-3xl mx-auto bg-white rounded-2xl shadow-md p-8 space-y-6"
-          >
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <div>
-                <label
-                  for="order-name"
-                  class="block text-sm font-medium text-[#2d5d2d] mb-1"
-                  >Your Name *</label
-                >
-                <input
-                  id="order-name"
-                  type="text"
-                  class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-[#a4d65e]/60"
-                  placeholder="Enter your name"
-                  required
-                />
-              </div>
-              <div>
-                <label
-                  for="order-phone"
-                  class="block text-sm font-medium text-[#2d5d2d] mb-1"
-                  >Phone Number *</label
-                >
-                <input
-                  id="order-phone"
-                  type="tel"
-                  class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-[#a4d65e]/60"
-                  placeholder="e.g. 96999 56388"
-                  required
-                />
-              </div>
-            </div>
-
-            <div>
-              <label
-                for="order-address"
-                class="block text-sm font-medium text-[#2d5d2d] mb-1"
-                >Delivery Address</label
-              >
-              <textarea
-                id="order-address"
-                class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-[#a4d65e]/60 min-h-[80px]"
-                placeholder="Flat / House No., Area, City"
-              ></textarea>
-            </div>
-
-            <div class="space-y-3">
-              <div class="flex items-center justify-between">
-                <h3 class="text-lg font-semibold text-[#2d5d2d]">
-                  Order Items
-                </h3>
-                <p class="text-xs text-gray-500">
-                  Example: Tomato – 2 kg, Onion – 1 kg
-                </p>
-              </div>
-
-              <!-- Simple list of items -->
-              <div class="space-y-2">
-                <!-- Repeatable rows -->
-                <div class="grid grid-cols-3 gap-2">
-                  <input
-                    type="text"
-                    class="order-item-name col-span-2 border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#a4d65e]/60"
-                    placeholder="Item name (e.g. Tomato)"
-                  />
-                  <input
-                    type="text"
-                    class="order-item-qty border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#a4d65e]/60"
-                    placeholder="Qty (kg)"
-                  />
-                </div>
-                <div class="grid grid-cols-3 gap-2">
-                  <input
-                    type="text"
-                    class="order-item-name col-span-2 border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#a4d65e]/60"
-                    placeholder="Item name"
-                  />
-                  <input
-                    type="text"
-                    class="order-item-qty border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#a4d65e]/60"
-                    placeholder="Qty (kg)"
-                  />
-                </div>
-                <div class="grid grid-cols-3 gap-2">
-                  <input
-                    type="text"
-                    class="order-item-name col-span-2 border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#a4d65e]/60"
-                    placeholder="Item name"
-                  />
-                  <input
-                    type="text"
-                    class="order-item-qty border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#a4d65e]/60"
-                    placeholder="Qty (kg)"
-                  />
-                </div>
-                <div class="grid grid-cols-3 gap-2">
-                  <input
-                    type="text"
-                    class="order-item-name col-span-2 border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#a4d65e]/60"
-                    placeholder="Item name"
-                  />
-                  <input
-                    type="text"
-                    class="order-item-qty border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#a4d65e]/60"
-                    placeholder="Qty (kg)"
-                  />
-                </div>
-                <div class="grid grid-cols-3 gap-2">
-                  <input
-                    type="text"
-                    class="order-item-name col-span-2 border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#a4d65e]/60"
-                    placeholder="Item name"
-                  />
-                  <input
-                    type="text"
-                    class="order-item-qty border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#a4d65e]/60"
-                    placeholder="Qty (kg)"
-                  />
-                </div>
-              </div>
-            </div>
-
-            <button
-              id="send-order-btn"
-              class="w-full bg-[#2d5d2d] hover:bg-[#1f4020] text-white rounded-full py-3 text-sm font-semibold flex items-center justify-center gap-2"
-            >
-              <i class="fa-brands fa-whatsapp text-lg"></i>
-              Place Order on WhatsApp
-            </button>
-
-            <p class="text-xs text-gray-500 text-center">
-              We will confirm availability and prices on WhatsApp before
-              processing your order.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <!-- TESTIMONIALS -->
-      <section id="testimonials" class="py-20 px-4 bg-white">
-        <div class="max-w-6xl mx-auto">
-          <div class="text-center mb-16">
-            <h2 class="text-3xl md:text-5xl text-[#2d5d2d] mb-4">
-              What Our Customers Say
-            </h2>
-            <p class="text-lg text-gray-600 max-w-2xl mx-auto">
-              Join hundreds of satisfied customers enjoying farm-fresh produce
-            </p>
-          </div>
-
-          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <!-- Testimonial 1 -->
-            <div
-              class="bg-gradient-to-br from-[#c5e3d8]/30 to-white p-8 rounded-2xl border border-[#c5e3d8] hover:shadow-xl transition-all duration-300"
-            >
-              <div class="flex gap-1 mb-4">
-                <span class="text-[#a4d65e] text-xl">★</span>
-                <span class="text-[#a4d65e] text-xl">★</span>
-                <span class="text-[#a4d65e] text-xl">★</span>
-                <span class="text-[#a4d65e] text-xl">★</span>
-                <span class="text-[#a4d65e] text-xl">★</span>
-              </div>
-              <p class="text-gray-700 mb-6 italic">
-                "The quality of vegetables is outstanding! Everything is so
-                fresh and lasts much longer than what I used to get from the
-                market. Plus, the prices are unbeatable!"
-              </p>
-              <div class="flex items-center gap-4">
-                <div class="text-4xl">👩‍🍳</div>
-                <div>
-                  <div class="text-[#2d5d2d]">Priya Shinde</div>
-                  <div class="text-sm text-gray-600">Home Chef</div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Testimonial 2 -->
-            <div
-              class="bg-gradient-to-br from-[#c5e3d8]/30 to-white p-8 rounded-2xl border border-[#c5e3d8] hover:shadow-xl transition-all duration-300"
-            >
-              <div class="flex gap-1 mb-4">
-                <span class="text-[#a4d65e] text-xl">★</span>
-                <span class="text-[#a4d65e] text-xl">★</span>
-                <span class="text-[#a4d65e] text-xl">★</span>
-                <span class="text-[#a4d65e] text-xl">★</span>
-                <span class="text-[#a4d65e] text-xl">★</span>
-              </div>
-              <p class="text-gray-700 mb-6 italic">
-                "We switched to FarMaa for our hotel supplies . The
-                consistency in quality and timely delivery has been exceptional."
-              </p>
-              <div class="flex items-center gap-4">
-                <div class="text-4xl">👨‍🍳</div>
-                <div>
-                  <div class="text-[#2d5d2d]">Rajesh Kumar</div>
-                  <div class="text-sm text-gray-600">Hotel Owner</div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Testimonial 3 -->
-            <div
-              class="bg-gradient-to-br from-[#c5e3d8]/30 to-white p-8 rounded-2xl border border-[#c5e3d8] hover:shadow-xl transition-all duration-300"
-            >
-              <div class="flex gap-1 mb-4">
-                <span class="text-[#a4d65e] text-xl">★</span>
-                <span class="text-[#a4d65e] text-xl">★</span>
-                <span class="text-[#a4d65e] text-xl">★</span>
-                <span class="text-[#a4d65e] text-xl">★</span>
-                <span class="text-[#a4d65e] text-xl">★</span>
-              </div>
-              <p class="text-gray-700 mb-6 italic">
-                "As a mother, I want the best for my family. FarMaa delivers
-                fresh, organic produce right to my doorstep."
-              </p>
-              <div class="flex items-center gap-4">
-                <div class="text-4xl">👩‍👧‍👦</div>
-                <div>
-                  <div class="text-[#2d5d2d]">Anita Jadhav</div>
-                  <div class="text-sm text-gray-600">Homemaker</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- CTA -->
-      <section
-        class="py-20 px-4 bg-gradient-to-br from-[#a4d65e] to-[#2d5d2d] relative overflow-hidden"
-      >
-        <div
-          class="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full blur-3xl"
-        ></div>
-        <div
-          class="absolute bottom-0 left-0 w-64 h-64 bg-white/10 rounded-full blur-3xl"
-        ></div>
-
-        <div class="max-w-4xl mx-auto text-center relative z-10">
-          <h2 class="text-3xl md:text-5xl text-white mb-6">
-            Ready to Experience Farm-Fresh Goodness?
-          </h2>
-          <p
-            class="text-lg md:text-xl text-white/90 mb-12 max-w-2xl mx-auto"
-          >
-            Start your journey to healthier living with fresh, organic produce
-            delivered to your doorstep
-          </p>
-
-          <div class="flex flex-col sm:flex-row gap-4 justify-center mb-16">
-            <button
-              class="bg-white text-[#2d5d2d] hover:bg-gray-100 px-8 py-3 rounded-full text-sm font-medium"
-            >
-              Get Started Today
-            </button>
-            <a
-              href="tel:9699956388"
-              class="border-2 border-white bg-transparent text-white hover:bg-white hover:text-[#2d5d2d] px-8 py-3 rounded-full text-sm font-medium"
-            >
-              Contact Us
-            </a>
-          </div>
-
-          <div
-            class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-3xl mx-auto text-white"
-          >
-            <div class="flex flex-col items-center gap-2">
-            <i class="fa-solid fa-phone text-xl"></i>
-              <div class="text-sm">Call Us</div>
-              <div>+91 96999 56388</div>
-            </div>
-            <div class="flex flex-col items-center gap-2">
-            <i class="fa-solid fa-envelope text-xl"></i>
-              <div class="text-sm">Email Us</div>
-              <div>farmaa973@gmail.com</div>
-            </div>
-            <div class="flex flex-col items-center gap-2">
-            <i class="fa-solid fa-location-dot text-xl"></i>
-              <div class="text-sm">Visit Us</div>
-              <div>Pune, Maharashtra</div>
-            </div>
-          </div>
-        </div>
-      </section>
-    </main>
-
-    <!-- FOOTER -->
-    <footer class="bg-[#2d5d2d] text-white">
-      <div class="max-w-7xl mx-auto px-4 py-12">
-        <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
-          <!-- Brand -->
-          <div>
-            <div class="flex items-center gap-2 mb-4">
-              <img
-                data-logo="farmaa"
-                src="https://i.postimg.cc/5t5mBcqS/Far-Maa.png"
-                alt="FarMaa"
-                class="h-12 w-12"
-              />
-              <div>
-                <div class="text-lg">FarMaa</div>
-                <div class="text-xs text-[#a4d65e]">Fresh &amp; Organic</div>
-              </div>
-            </div>
-            <p class="text-white/80 text-sm">
-              Bringing farm-fresh produce directly to your doorstep. Quality
-              you can trust, prices you'll love.
-            </p>
-          </div>
-
-          <!-- Quick Links -->
-          <div>
-            <h4 class="text-lg mb-4">Quick Links</h4>
-            <ul class="space-y-2 text-sm">
-              <li>
-                <a
-                  href="#about"
-                  class="text-white/80 hover:text-[#a4d65e] transition-colors"
-                  >About Us</a
-                >
-              </li>
-              <li>
-                <a
-                  href="#products"
-                  class="text-white/80 hover:text-[#a4d65e] transition-colors"
-                  >Our Products</a
-                >
-              </li>
-              <li>
-                <a
-                  href="#"
-                  class="text-white/80 hover:text-[#a4d65e] transition-colors"
-                  >Partner Farms</a
-                >
-              </li>
-              <li>
-                <a
-                  href="#"
-                  class="text-white/80 hover:text-[#a4d65e] transition-colors"
-                  >Delivery Areas</a
-                >
-              </li>
-            </ul>
-          </div>
-
-          <!-- Contact -->
-          <div>
-            <h4 class="text-lg mb-4">Contact Us</h4>
-            <ul class="space-y-3 text-sm">
-              <li class="flex items-start gap-2">
-                <i class="fa-solid fa-envelope mt-0.5 text-sm text-[#a4d65e]"></i>
-                <a
-                  href="mailto:farmaa973@gmail.com"
-                  class="text-white/80 hover:text-[#a4d65e] transition-colors break-all"
-                  >farmaa973@gmail.com</a
-                >
-              </li>
-              <li class="flex items-start gap-2">
-                <i class="fa-solid fa-phone mt-0.5 text-sm text-[#a4d65e]"></i>
-                <a
-                  href="tel:9699956388"
-                  class="text-white/80 hover:text-[#a4d65e] transition-colors"
-                  >+91 96999 56388</a
-                >
-              </li>
-              <li class="flex items-start gap-2">
-                <i class="fa-solid fa-location-dot mt-0.5 text-sm text-[#a4d65e]"></i>
-                <span class="text-white/80">Pune, Maharashtra</span>
-              </li>
-            </ul>
-          </div>
-
-          <!-- Social -->
-          <div>
-            <h4 class="text-lg mb-4">Connect With Us</h4>
-            <div class="flex gap-3 mb-4">
-              <a
-                href="#"
-                class="w-10 h-10 rounded-full bg-white/10 hover:bg-[#a4d65e] flex items-center justify-center transition-colors"
-              >
-                <i class="fa-brands fa-facebook-f"></i>
-              </a
-              >
-              <a
-                href="#"
-                class="w-10 h-10 rounded-full bg-white/10 hover:bg-[#a4d65e] flex items-center justify-center transition-colors"
-              >
-                <i class="fa-brands fa-instagram"></i>
-              </a
-              >
-              <a
-                href="#"
-                class="w-10 h-10 rounded-full bg-white/10 hover:bg-[#a4d65e] flex items-center justify-center transition-colors"
-              >
-                <i class="fa-brands fa-x-twitter"></i>
-              </a
-              >
-              <a
-                href="#"
-                class="w-10 h-10 rounded-full bg-white/10 hover:bg-[#a4d65e] flex items-center justify-center transition-colors"
-              >
-                <i class="fa-brands fa-linkedin-in"></i>
-              </a
-              >
-            </div>
-            <p class="text-sm text-white/80">
-              Subscribe to our newsletter for fresh updates and special offers!
-            </p>
-          </div>
-        </div>
-
-        <div
-          class="border-t border-white/20 pt-8 text-center text-sm text-white/70"
-        >
-          <p>Made with love for fresh food lovers</p>
-          <p class="mt-2">
-            © 2026 FarMaa. All rights reserved. | Privacy Policy | Terms of
-            Service
-          </p>
-        </div>
-      </div>
-    </footer>
-
-    <!-- Profile modal -->
-    <div
-      id="profile-modal"
-      class="fixed inset-0 bg-black/40 z-50 hidden items-center justify-center px-4"
-    >
-      <div
-        class="bg-white rounded-2xl shadow-2xl max-w-md w-full p-6 relative"
-      >
-        <button
-          id="profile-close"
-          class="absolute right-4 top-4 text-gray-500 hover:text-gray-700"
-          aria-label="Close profile"
-        >
-          <i class="fa-solid fa-xmark"></i>
+      <!-- Actions (static, no JS menu) -->
+      <div class="flex items-center gap-4">
+        <button id="profile-button"
+          class="hidden sm:flex flex-col items-center justify-center text-gray-700 hover:text-[#2d5d2d] p-2 rounded-lg transition-colors"
+          aria-label="Account">
+          <i class="fa-regular fa-user text-lg"></i>
+          <span class="text-xs font-medium">Profile</span>
         </button>
-        <h2 class="text-2xl font-semibold text-[#2d5d2d] mb-4">
-          Your Profile
-        </h2>
-        <p class="text-sm text-gray-600 mb-4">
-          We save this information in your browser so you don&rsquo;t have to
-          type it again next time.
-        </p>
-        <form id="profile-form" class="space-y-4">
-          <div>
-            <label
-              for="profile-name"
-              class="block text-sm font-medium text-[#2d5d2d] mb-1"
-              >Full Name</label
-            >
-            <input
-              id="profile-name"
-              type="text"
-              class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-[#a4d65e]/60"
-              placeholder="Your name"
-            />
-          </div>
-          <div>
-            <label
-              for="profile-phone"
-              class="block text-sm font-medium text-[#2d5d2d] mb-1"
-              >Phone Number</label
-            >
-            <input
-              id="profile-phone"
-              type="tel"
-              class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-[#a4d65e]/60"
-              placeholder="Mobile number"
-            />
-          </div>
-          <div>
-            <label
-              for="profile-email"
-              class="block text-sm font-medium text-[#2d5d2d] mb-1"
-              >Email</label
-            >
-            <input
-              id="profile-email"
-              type="email"
-              class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-[#a4d65e]/60"
-              placeholder="you@example.com"
-            />
-          </div>
-          <div>
-            <label
-              for="profile-address"
-              class="block text-sm font-medium text-[#2d5d2d] mb-1"
-              >Default Address</label
-            >
-            <textarea
-              id="profile-address"
-              class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-[#a4d65e]/60 min-h-[80px]"
-              placeholder="Flat / House No., Area, City"
-            ></textarea>
-          </div>
-          <button
-            type="submit"
-            class="w-full bg-[#2d5d2d] hover:bg-[#1f4020] text-white rounded-full py-2 text-sm font-semibold"
-          >
-            Save Profile
-          </button>
-          <p
-            id="profile-saved"
-            class="text-xs text-green-700 mt-2 hidden text-center"
-          >
-            Profile saved in your browser.
-          </p>
-        </form>
+        <a href="#products"
+          class="hidden md:inline-flex bg-[#2d5d2d] hover:bg-[#1f4020] text-white rounded-full px-5 py-2 text-sm items-center justify-center">
+          Order Now
+        </a>
       </div>
     </div>
+  </header>
 
-    <script>
-      // Simple WhatsApp order sender
-      document
-        .getElementById('send-order-btn')
-        ?.addEventListener('click', function () {
-          const nameInput = document.getElementById('order-name');
-          const phoneInput = document.getElementById('order-phone');
-          const addressInput = document.getElementById('order-address');
-          if (!nameInput || !phoneInput) return;
+  <main>
+    <!-- HERO -->
+    <section id="home"
+      class="relative bg-gradient-to-br from-[#c5e3d8] via-[#d4ede4] to-[#e8f5ef] py-20 px-4 overflow-hidden">
+      <div class="absolute top-10 right-10 w-32 h-32 bg-[#a4d65e]/20 rounded-full blur-3xl"></div>
+      <div class="absolute bottom-10 left-10 w-40 h-40 bg-[#2d5d2d]/10 rounded-full blur-3xl"></div>
 
-          const name = nameInput.value.trim();
-          const phone = phoneInput.value.trim();
-          const address = addressInput ? addressInput.value.trim() : '';
+      <div class="max-w-6xl mx-auto relative">
+        <div class="flex flex-col md:flex-row items-center gap-12">
+          <!-- Left -->
+          <div class="flex-1 text-center md:text-left">
+            <h1 class="text-4xl md:text-6xl mb-6 text-[#2d5d2d]">
+              Fresh Fruits &amp; Vegetables
+              <span class="block text-[#a4d65e]">From Farmer to Your Place</span>
+            </h1>
+            <p class="text-lg md:text-xl text-gray-700 mb-8 max-w-2xl mx-auto md:mx-0">
+              Experience the joy of farm-fresh produce delivered directly to
+              your place. We eliminate middlemen to bring you the freshest
+              quality at unbeatable prices.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+              <a href="#products"
+                class="inline-flex bg-[#2d5d2d] hover:bg-[#1f4020] text-white px-8 py-3 rounded-full text-sm font-medium items-center justify-center">
+                Order Now
+              </a>
+              <button
+                class="border-2 border-[#2d5d2d] text-[#2d5d2d] hover:bg-[#2d5d2d] hover:text-white px-8 py-3 rounded-full text-sm font-medium">
+                Learn More
+              </button>
+            </div>
+            <div class="grid grid-cols-3 gap-6 mt-12 max-w-md mx-auto md:mx-0">
+              <div class="text-center md:text-left">
+                <div class="text-3xl text-[#2d5d2d] mb-1">90+</div>
+                <div class="text-sm text-gray-600">Happy Customers</div>
+              </div>
+              <div class="text-center md:text-left">
+                <div class="text-3xl text-[#2d5d2d] mb-1">20+</div>
+                <div class="text-sm text-gray-600">Partner Farms</div>
+              </div>
+              <div class="text-center md:text-left">
+                <div class="text-3xl text-[#2d5d2d] mb-1">100%</div>
+                <div class="text-sm text-gray-600">Fresh &amp; Organic</div>
+              </div>
+            </div>
+          </div>
 
-          const itemNames = Array.from(
-            document.querySelectorAll('.order-item-name')
-          );
-          const itemQtys = Array.from(
-            document.querySelectorAll('.order-item-qty')
-          );
+          <!-- Right -->
+          <div class="flex-1 flex justify-center">
+            <div class="relative">
+              <div class="absolute inset-0 bg-gradient-to-br from-[#c5e3d8]/30 to-[#d4ede4]/30 rounded-full blur-2xl">
+              </div>
+              <img data-logo="farmaa" src="https://i.postimg.cc/5t5mBcqS/Far-Maa.png" alt="FarMaa - Fresh &amp; Organic"
+                class="relative w-80 h-80 md:w-96 md:h-96 object-contain drop-shadow-2xl animate-float bg-gradient-to-br from-[#c5e3d8]/50 to-[#d4ede4]/50 rounded-full p-4" />
+              <script>
+                // Use the already-embedded header PNG as the hero image source
+                (function () {
+                  const headerImg = document.querySelector('header img');
+                  const heroImg = document.querySelector('img[data-logo="farmaa"]');
+                  if (headerImg && heroImg) heroImg.src = headerImg.src;
+                })();
+              </script>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-          const lines = [];
-          for (let i = 0; i < itemNames.length; i++) {
-            const item = itemNames[i].value.trim();
-            const qty = itemQtys[i].value.trim();
-            if (item && qty) {
-              lines.push(`• ${item} - ${qty}`);
-            }
-          }
+    <!-- FEATURES -->
+    <section id="features" class="py-20 px-4 bg-white">
+      <div class="max-w-6xl mx-auto">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl md:text-5xl text-[#2d5d2d] mb-4">
+            Why Choose FarMaa?
+          </h2>
+          <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+            We're revolutionizing the way fresh produce reaches your table
+          </p>
+        </div>
 
-          if (!name || !phone) {
-            alert('Please fill in your name and phone number.');
-            return;
-          }
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <!-- Feature 1 -->
+          <div
+            class="group p-6 rounded-2xl bg-gradient-to-br from-[#c5e3d8]/20 to-white border border-[#c5e3d8] hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
+            <div class="w-14 h-14 rounded-full flex items-center justify-center mb-4"
+              style="background-color: #2d5d2d15">
+              <i class="fa-solid fa-tags text-xl text-[#2d5d2d]"></i>
+            </div>
+            <h3 class="text-xl text-[#2d5d2d] mb-3">Lower Prices</h3>
+            <p class="text-gray-600">
+              Direct sourcing from farmers means no middlemen markup. Save up
+              to 30% on your grocery bills.
+            </p>
+          </div>
 
-          if (lines.length === 0) {
-            alert('Please add at least one item with quantity.');
-            return;
-          }
+          <!-- Feature 2 -->
+          <div
+            class="group p-6 rounded-2xl bg-gradient-to-br from-[#c5e3d8]/20 to-white border border-[#c5e3d8] hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
+            <div class="w-14 h-14 rounded-full flex items-center justify-center mb-4"
+              style="background-color: #a4d65e15">
+              <i class="fa-solid fa-leaf text-xl text-[#4b9b3b]"></i>
+            </div>
+            <h3 class="text-xl text-[#2d5d2d] mb-3">Fresh &amp; Organic</h3>
+            <p class="text-gray-600">
+              Handpicked produce harvested at peak freshness. 100% organic and
+              chemical-free.
+            </p>
+          </div>
 
-          let message = `Hello FarMaa! I'd like to place an order:%0A%0A`;
-          message += `Name: ${name}%0APhone: ${phone}`;
-          if (address) {
-            message += `%0AAddress: ${address}`;
-          }
-          message += `%0A%0AItems:%0A`;
-          message += lines.join('%0A');
-          message += `%0A%0APlease confirm availability and prices.`;
+          <!-- Feature 3 -->
+          <div
+            class="group p-6 rounded-2xl bg-gradient-to-br from-[#c5e3d8]/20 to-white border border-[#c5e3d8] hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
+            <div class="w-14 h-14 rounded-full flex items-center justify-center mb-4"
+              style="background-color: #2d5d2d15">
+              <i class="fa-solid fa-truck-fast text-xl text-[#2d5d2d]"></i>
+            </div>
+            <h3 class="text-xl text-[#2d5d2d] mb-3">Fast Delivery</h3>
+            <p class="text-gray-600">
+              Same-day delivery to your doorstep.
+            </p>
+          </div>
 
-          const url = `https://wa.me/919699956388?text=${message}`;
-          window.open(url, '_blank');
-        });
+          <!-- Feature 4 -->
+          <div
+            class="group p-6 rounded-2xl bg-gradient-to-br from-[#c5e3d8]/20 to-white border border-[#c5e3d8] hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
+            <div class="w-14 h-14 rounded-full flex items-center justify-center mb-4"
+              style="background-color: #a4d65e15">
+              <i class="fa-solid fa-shield-heart text-xl text-[#4b9b3b]"></i>
+            </div>
+            <h3 class="text-xl text-[#2d5d2d] mb-3">Quality Guaranteed</h3>
+            <p class="text-gray-600">
+              Rigorous quality checks ensure only the best produce reaches
+              you. 100% satisfaction guaranteed.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-      // Simple "backend" in the browser: save profile data in localStorage
-      (function () {
-        const profileBtn = document.getElementById('profile-button');
-        const modal = document.getElementById('profile-modal');
-        const closeBtn = document.getElementById('profile-close');
-        const form = document.getElementById('profile-form');
-        const savedMsg = document.getElementById('profile-saved');
+    <!-- HOW IT WORKS -->
+    <section id="how-it-works" class="py-20 px-4 bg-gradient-to-br from-[#2d5d2d] to-[#1f4020]">
+      <div class="max-w-6xl mx-auto">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl md:text-5xl text-white mb-4">How It Works</h2>
+          <p class="text-lg text-[#c5e3d8] max-w-2xl mx-auto">
+            From farm to your table in 3 simple steps
+          </p>
+        </div>
 
-        if (!profileBtn || !modal || !form) return;
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 relative">
+          <!-- Step 1 -->
+          <div class="relative">
+            <div class="hidden lg:block absolute top-12 left-[60%] w-[80%] h-0.5 bg-[#a4d65e]/30"></div>
+            <div
+              class="relative bg-white/10 backdrop-blur-sm p-6 rounded-2xl border border-white/20 hover:bg-white/20 transition-all duration-300">
+              <div class="flex flex-col items-center text-center">
+                <div class="w-16 h-16 rounded-full bg-[#a4d65e] flex items-center justify-center mb-4">
+                  <i class="fa-regular fa-hand-pointer text-3xl text-[#2d5d2d]"></i>
+                </div>
+                <div class="text-4xl text-[#a4d65e] mb-2">01</div>
+                <h3 class="text-xl text-white mb-3">Place Your Order</h3>
+                <p class="text-[#c5e3d8]">
+                  Browse our fresh selection and order online in minutes
+                </p>
+              </div>
+            </div>
+          </div>
 
-        function openModal() {
-          modal.classList.remove('hidden');
-          modal.classList.add('flex');
+          <!-- Step 2 -->
+          <div class="relative">
+            <div class="hidden lg:block absolute top-12 left-[60%] w-[80%] h-0.5 bg-[#a4d65e]/30"></div>
+            <div
+              class="relative bg-white/10 backdrop-blur-sm p-6 rounded-2xl border border-white/20 hover:bg-white/20 transition-all duration-300">
+              <div class="flex flex-col items-center text-center">
+                <div class="w-16 h-16 rounded-full bg-[#a4d65e] flex items-center justify-center mb-4">
+                  <i class="fa-solid fa-box-open text-3xl text-[#2d5d2d]"></i>
+                </div>
+                <div class="text-4xl text-[#a4d65e] mb-2">02</div>
+                <h3 class="text-xl text-white mb-3">
+                  FarMaa Packs Your Order
+                </h3>
+                <p class="text-[#c5e3d8]">
+                  We carefully pack your order ensuring quality and freshness
+                </p>
+              </div>
+            </div>
+          </div>
 
-          // Load saved data
-          try {
-            const raw = localStorage.getItem('farmaaProfile');
-            if (raw) {
-              const data = JSON.parse(raw);
-              document.getElementById('profile-name').value =
-                data.name || '';
-              document.getElementById('profile-phone').value =
-                data.phone || '';
-              document.getElementById('profile-email').value =
-                data.email || '';
-              document.getElementById('profile-address').value =
-                data.address || '';
-            }
-          } catch (e) {
-            console.error('Failed to read profile from storage', e);
+          <!-- Step 3 -->
+          <div class="relative">
+            <div
+              class="relative bg-white/10 backdrop-blur-sm p-6 rounded-2xl border border-white/20 hover:bg-white/20 transition-all duration-300">
+              <div class="flex flex-col items-center text-center">
+                <div class="w-16 h-16 rounded-full bg-[#a4d65e] flex items-center justify-center mb-4">
+                  <i class="fa-solid fa-truck-ramp-box text-3xl text-[#2d5d2d]"></i>
+                </div>
+                <div class="text-4xl text-[#a4d65e] mb-2">03</div>
+                <h3 class="text-xl text-white mb-3">Delivered to You</h3>
+                <p class="text-[#c5e3d8]">
+                  Fresh produce delivered straight to your doorstep
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRODUCTS / ORDER FORM -->
+    <section id="products" class="py-20 px-4 bg-[#f9fcf9]">
+      <div class="max-w-7xl mx-auto">
+        <!-- WhatsApp bar -->
+        <div
+          class="mb-12 bg-gradient-to-r from-[#a4d65e] to-[#2d5d2d] rounded-2xl p-6 flex flex-col md:flex-row items-center justify-between gap-4 shadow-lg">
+          <div class="text-white text-center md:text-left">
+            <h3 class="text-xl md:text-2xl mb-1">
+              Need Help with Your Order?
+            </h3>
+            <p class="text-white/90">
+              Chat with us on WhatsApp for instant assistance
+            </p>
+          </div>
+          <a href="https://wa.me/919699956388" target="_blank" rel="noreferrer"
+            class="bg-white text-[#2d5d2d] hover:bg-gray-100 px-6 py-3 rounded-full text-sm font-medium shadow-md">
+            Connect on WhatsApp
+          </a>
+        </div>
+
+        <div class="text-center mb-16">
+          <h2 class="text-3xl md:text-5xl text-[#2d5d2d] mb-4">
+            Place Your Order
+          </h2>
+          <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+            Add the items you need with quantity and send your order to us on
+            WhatsApp.
+          </p>
+        </div>
+
+        <div class="max-w-3xl mx-auto bg-white rounded-2xl shadow-md p-8 space-y-6">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div>
+              <label for="order-name" class="block text-sm font-medium text-[#2d5d2d] mb-1">Your Name *</label>
+              <input id="order-name" type="text"
+                class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-[#a4d65e]/60"
+                placeholder="Enter your name" required />
+            </div>
+            <div>
+              <label for="order-phone" class="block text-sm font-medium text-[#2d5d2d] mb-1">Phone Number *</label>
+              <input id="order-phone" type="tel"
+                class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-[#a4d65e]/60"
+                placeholder="e.g. 96999 56388" required />
+            </div>
+          </div>
+
+          <div>
+            <label for="order-address" class="block text-sm font-medium text-[#2d5d2d] mb-1">Delivery Address</label>
+            <textarea id="order-address"
+              class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-[#a4d65e]/60 min-h-[80px]"
+              placeholder="Flat / House No., Area, City"></textarea>
+          </div>
+
+          <div class="space-y-3">
+            <div class="flex items-center justify-between">
+              <h3 class="text-lg font-semibold text-[#2d5d2d]">
+                Order Items
+              </h3>
+              <p class="text-xs text-gray-500">
+                Example: Tomato – 2 kg, Onion – 1 kg
+              </p>
+            </div>
+
+            <!-- Simple list of items -->
+            <div class="space-y-2">
+              <!-- Repeatable rows -->
+              <div class="grid grid-cols-3 gap-2">
+                <input type="text"
+                  class="order-item-name col-span-2 border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#a4d65e]/60"
+                  placeholder="Item name (e.g. Tomato)" />
+                <input type="text"
+                  class="order-item-qty border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#a4d65e]/60"
+                  placeholder="Qty (kg)" />
+              </div>
+              <div class="grid grid-cols-3 gap-2">
+                <input type="text"
+                  class="order-item-name col-span-2 border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#a4d65e]/60"
+                  placeholder="Item name" />
+                <input type="text"
+                  class="order-item-qty border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#a4d65e]/60"
+                  placeholder="Qty (kg)" />
+              </div>
+              <div class="grid grid-cols-3 gap-2">
+                <input type="text"
+                  class="order-item-name col-span-2 border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#a4d65e]/60"
+                  placeholder="Item name" />
+                <input type="text"
+                  class="order-item-qty border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#a4d65e]/60"
+                  placeholder="Qty (kg)" />
+              </div>
+              <div class="grid grid-cols-3 gap-2">
+                <input type="text"
+                  class="order-item-name col-span-2 border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#a4d65e]/60"
+                  placeholder="Item name" />
+                <input type="text"
+                  class="order-item-qty border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#a4d65e]/60"
+                  placeholder="Qty (kg)" />
+              </div>
+              <div class="grid grid-cols-3 gap-2">
+                <input type="text"
+                  class="order-item-name col-span-2 border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#a4d65e]/60"
+                  placeholder="Item name" />
+                <input type="text"
+                  class="order-item-qty border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#a4d65e]/60"
+                  placeholder="Qty (kg)" />
+              </div>
+            </div>
+          </div>
+
+          <button id="send-order-btn"
+            class="w-full bg-[#2d5d2d] hover:bg-[#1f4020] text-white rounded-full py-3 text-sm font-semibold flex items-center justify-center gap-2">
+            <i class="fa-brands fa-whatsapp text-lg"></i>
+            Place Order on WhatsApp
+          </button>
+
+          <p class="text-xs text-gray-500 text-center">
+            We will confirm availability and prices on WhatsApp before
+            processing your order.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section id="testimonials" class="py-20 px-4 bg-white">
+      <div class="max-w-6xl mx-auto">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl md:text-5xl text-[#2d5d2d] mb-4">
+            What Our Customers Say
+          </h2>
+          <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+            Join hundreds of satisfied customers enjoying farm-fresh produce
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <!-- Testimonial 1 -->
+          <div
+            class="bg-gradient-to-br from-[#c5e3d8]/30 to-white p-8 rounded-2xl border border-[#c5e3d8] hover:shadow-xl transition-all duration-300">
+            <div class="flex gap-1 mb-4">
+              <span class="text-[#a4d65e] text-xl">★</span>
+              <span class="text-[#a4d65e] text-xl">★</span>
+              <span class="text-[#a4d65e] text-xl">★</span>
+              <span class="text-[#a4d65e] text-xl">★</span>
+              <span class="text-[#a4d65e] text-xl">★</span>
+            </div>
+            <p class="text-gray-700 mb-6 italic">
+              "The quality of vegetables is outstanding! Everything is so
+              fresh and lasts much longer than what I used to get from the
+              market. Plus, the prices are unbeatable!"
+            </p>
+            <div class="flex items-center gap-4">
+              <div class="text-4xl">👩‍🍳</div>
+              <div>
+                <div class="text-[#2d5d2d]">Priya Shinde</div>
+                <div class="text-sm text-gray-600">Home Chef</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 2 -->
+          <div
+            class="bg-gradient-to-br from-[#c5e3d8]/30 to-white p-8 rounded-2xl border border-[#c5e3d8] hover:shadow-xl transition-all duration-300">
+            <div class="flex gap-1 mb-4">
+              <span class="text-[#a4d65e] text-xl">★</span>
+              <span class="text-[#a4d65e] text-xl">★</span>
+              <span class="text-[#a4d65e] text-xl">★</span>
+              <span class="text-[#a4d65e] text-xl">★</span>
+              <span class="text-[#a4d65e] text-xl">★</span>
+            </div>
+            <p class="text-gray-700 mb-6 italic">
+              "We switched to FarMaa for our hotel supplies . The
+              consistency in quality and timely delivery has been exceptional."
+            </p>
+            <div class="flex items-center gap-4">
+              <div class="text-4xl">👨‍🍳</div>
+              <div>
+                <div class="text-[#2d5d2d]">Rajesh Kumar</div>
+                <div class="text-sm text-gray-600">Hotel Owner</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 3 -->
+          <div
+            class="bg-gradient-to-br from-[#c5e3d8]/30 to-white p-8 rounded-2xl border border-[#c5e3d8] hover:shadow-xl transition-all duration-300">
+            <div class="flex gap-1 mb-4">
+              <span class="text-[#a4d65e] text-xl">★</span>
+              <span class="text-[#a4d65e] text-xl">★</span>
+              <span class="text-[#a4d65e] text-xl">★</span>
+              <span class="text-[#a4d65e] text-xl">★</span>
+              <span class="text-[#a4d65e] text-xl">★</span>
+            </div>
+            <p class="text-gray-700 mb-6 italic">
+              "As a mother, I want the best for my family. FarMaa delivers
+              fresh, organic produce right to my doorstep."
+            </p>
+            <div class="flex items-center gap-4">
+              <div class="text-4xl">👩‍👧‍👦</div>
+              <div>
+                <div class="text-[#2d5d2d]">Anita Jadhav</div>
+                <div class="text-sm text-gray-600">Homemaker</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-20 px-4 bg-gradient-to-br from-[#a4d65e] to-[#2d5d2d] relative overflow-hidden">
+      <div class="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full blur-3xl"></div>
+      <div class="absolute bottom-0 left-0 w-64 h-64 bg-white/10 rounded-full blur-3xl"></div>
+
+      <div class="max-w-4xl mx-auto text-center relative z-10">
+        <h2 class="text-3xl md:text-5xl text-white mb-6">
+          Ready to Experience Farm-Fresh Goodness?
+        </h2>
+        <p class="text-lg md:text-xl text-white/90 mb-12 max-w-2xl mx-auto">
+          Start your journey to healthier living with fresh, organic produce
+          delivered to your doorstep
+        </p>
+
+        <div class="flex flex-col sm:flex-row gap-4 justify-center mb-16">
+          <a href="#products"
+            class="bg-white text-[#2d5d2d] hover:bg-gray-100 px-8 py-3 rounded-full text-sm font-medium flex items-center justify-center">
+            Get Started Today
+          </a>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-3xl mx-auto text-white">
+          <div class="flex flex-col items-center gap-2">
+            <i class="fa-solid fa-phone text-xl"></i>
+            <div class="text-sm">Call Us</div>
+            <div>+91 96999 56388</div>
+          </div>
+          <div class="flex flex-col items-center gap-2">
+            <i class="fa-solid fa-envelope text-xl"></i>
+            <div class="text-sm">Email Us</div>
+            <div>farmaa973@gmail.com</div>
+          </div>
+          <div class="flex flex-col items-center gap-2">
+            <i class="fa-solid fa-location-dot text-xl"></i>
+            <div class="text-sm">Visit Us</div>
+            <div>Pune, Maharashtra</div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="bg-[#2d5d2d] text-white">
+    <div class="max-w-7xl mx-auto px-4 py-12">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+        <!-- Brand -->
+        <div>
+          <div class="flex items-center gap-2 mb-4">
+            <img data-logo="farmaa" src="https://i.postimg.cc/5t5mBcqS/Far-Maa.png" alt="FarMaa" class="h-12 w-12" />
+            <div>
+              <div class="text-lg">FarMaa</div>
+              <div class="text-xs text-[#a4d65e]">Fresh &amp; Organic</div>
+            </div>
+          </div>
+          <p class="text-white/80 text-sm">
+            Bringing farm-fresh produce directly to your doorstep. Quality
+            you can trust, prices you'll love.
+          </p>
+        </div>
+
+        <!-- Quick Links -->
+        <div>
+          <h4 class="text-lg mb-4">Quick Links</h4>
+          <ul class="space-y-2 text-sm">
+            <li>
+              <a href="#about" class="text-white/80 hover:text-[#a4d65e] transition-colors">About Us</a>
+            </li>
+            <li>
+              <a href="#products" class="text-white/80 hover:text-[#a4d65e] transition-colors">Our Products</a>
+            </li>
+            <li>
+              <a href="#" class="text-white/80 hover:text-[#a4d65e] transition-colors">Partner Farms</a>
+            </li>
+            <li>
+              <a href="#" class="text-white/80 hover:text-[#a4d65e] transition-colors">Delivery Areas</a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Contact -->
+        <div>
+          <h4 class="text-lg mb-4">Contact Us</h4>
+          <ul class="space-y-3 text-sm">
+            <li class="flex items-start gap-2">
+              <i class="fa-solid fa-envelope mt-0.5 text-sm text-[#a4d65e]"></i>
+              <a href="mailto:farmaa973@gmail.com"
+                class="text-white/80 hover:text-[#a4d65e] transition-colors break-all">farmaa973@gmail.com</a>
+            </li>
+            <li class="flex items-start gap-2">
+              <i class="fa-solid fa-phone mt-0.5 text-sm text-[#a4d65e]"></i>
+              <a href="tel:9699956388" class="text-white/80 hover:text-[#a4d65e] transition-colors">+91 96999 56388</a>
+            </li>
+            <li class="flex items-start gap-2">
+              <i class="fa-solid fa-location-dot mt-0.5 text-sm text-[#a4d65e]"></i>
+              <span class="text-white/80">Pune, Maharashtra</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Social -->
+        <div>
+          <h4 class="text-lg mb-4">Connect With Us</h4>
+          <div class="flex gap-3 mb-4">
+            <a href="https://www.instagram.com/farmaa973?igsh=MWRpN2ZxOHB0c2txcA=="
+              class="w-10 h-10 rounded-full bg-white/10 hover:bg-[#a4d65e] flex items-center justify-center transition-colors">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+          </div>
+          <p class="text-sm text-white/80">
+            Subscribe to our newsletter for fresh updates and special offers!
+          </p>
+        </div>
+      </div>
+
+      <div class="border-t border-white/20 pt-8 text-center text-sm text-white/70">
+        <p>Made with love for fresh food lovers</p>
+        <p class="mt-2">
+          © 2026 FarMaa. All rights reserved. | Privacy Policy | Terms of
+          Service
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Profile modal -->
+  <div id="profile-modal" class="fixed inset-0 bg-black/40 z-50 hidden items-center justify-center px-4">
+    <div class="bg-white rounded-2xl shadow-2xl max-w-md w-full p-6 relative">
+      <button id="profile-close" class="absolute right-4 top-4 text-gray-500 hover:text-gray-700"
+        aria-label="Close profile">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+      <h2 class="text-2xl font-semibold text-[#2d5d2d] mb-4">
+        Your Profile
+      </h2>
+      <p class="text-sm text-gray-600 mb-4">
+        We save this information in your browser so you don&rsquo;t have to
+        type it again next time.
+      </p>
+      <form id="profile-form" class="space-y-4">
+        <div>
+          <label for="profile-name" class="block text-sm font-medium text-[#2d5d2d] mb-1">Full Name</label>
+          <input id="profile-name" type="text"
+            class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-[#a4d65e]/60"
+            placeholder="Your name" />
+        </div>
+        <div>
+          <label for="profile-phone" class="block text-sm font-medium text-[#2d5d2d] mb-1">Phone Number</label>
+          <input id="profile-phone" type="tel"
+            class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-[#a4d65e]/60"
+            placeholder="Mobile number" />
+        </div>
+        <div>
+          <label for="profile-email" class="block text-sm font-medium text-[#2d5d2d] mb-1">Email</label>
+          <input id="profile-email" type="email"
+            class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-[#a4d65e]/60"
+            placeholder="you@example.com" />
+        </div>
+        <div>
+          <label for="profile-address" class="block text-sm font-medium text-[#2d5d2d] mb-1">Default Address</label>
+          <textarea id="profile-address"
+            class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-[#a4d65e]/60 min-h-[80px]"
+            placeholder="Flat / House No., Area, City"></textarea>
+        </div>
+        <button type="submit"
+          class="w-full bg-[#2d5d2d] hover:bg-[#1f4020] text-white rounded-full py-2 text-sm font-semibold">
+          Save Profile
+        </button>
+        <p id="profile-saved" class="text-xs text-green-700 mt-2 hidden text-center">
+          Profile saved in your browser.
+        </p>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    // Simple WhatsApp order sender
+    document
+      .getElementById('send-order-btn')
+      ?.addEventListener('click', function () {
+        const nameInput = document.getElementById('order-name');
+        const phoneInput = document.getElementById('order-phone');
+        const addressInput = document.getElementById('order-address');
+        if (!nameInput || !phoneInput) return;
+
+        const name = nameInput.value.trim();
+        const phone = phoneInput.value.trim();
+        const address = addressInput ? addressInput.value.trim() : '';
+
+        const itemNames = Array.from(
+          document.querySelectorAll('.order-item-name')
+        );
+        const itemQtys = Array.from(
+          document.querySelectorAll('.order-item-qty')
+        );
+
+        const lines = [];
+        for (let i = 0; i < itemNames.length; i++) {
+          const item = itemNames[i].value.trim();
+          const qty = itemQtys[i].value.trim();
+          if (item && qty) {
+            lines.push(`• ${item} - ${qty}`);
           }
         }
 
-        function closeModal() {
-          modal.classList.add('hidden');
-          modal.classList.remove('flex');
-          if (savedMsg) savedMsg.classList.add('hidden');
+        if (!name || !phone) {
+          alert('Please fill in your name and phone number.');
+          return;
         }
 
-        profileBtn.addEventListener('click', openModal);
-        if (closeBtn) closeBtn.addEventListener('click', closeModal);
-        modal.addEventListener('click', (e) => {
-          if (e.target === modal) closeModal();
-        });
+        if (lines.length === 0) {
+          alert('Please add at least one item with quantity.');
+          return;
+        }
 
-        form.addEventListener('submit', function (e) {
-          e.preventDefault();
-          const profile = {
-            name: document.getElementById('profile-name').value.trim(),
-            phone: document.getElementById('profile-phone').value.trim(),
-            email: document.getElementById('profile-email').value.trim(),
-            address: document
-              .getElementById('profile-address')
-              .value.trim(),
-          };
+        let message = `Hello FarMaa! I'd like to place an order:%0A%0A`;
+        message += `Name: ${name}%0APhone: ${phone}`;
+        if (address) {
+          message += `%0AAddress: ${address}`;
+        }
+        message += `%0A%0AItems:%0A`;
+        message += lines.join('%0A');
+        message += `%0A%0APlease confirm availability and prices.`;
 
-          try {
-            localStorage.setItem('farmaaProfile', JSON.stringify(profile));
-            if (savedMsg) savedMsg.classList.remove('hidden');
-          } catch (err) {
-            alert('Unable to save profile data in this browser.');
-          }
-        });
-      })();
-    </script>
-    <script>
-      (function () {
-        // Copy embedded base64 header logo to other logo placeholders
+        const url = `https://wa.me/919699956388?text=${message}`;
+        window.open(url, '_blank');
+      });
+
+    // Simple "backend" in the browser: save profile data in localStorage
+    (function () {
+      const profileBtn = document.getElementById('profile-button');
+      const modal = document.getElementById('profile-modal');
+      const closeBtn = document.getElementById('profile-close');
+      const form = document.getElementById('profile-form');
+      const savedMsg = document.getElementById('profile-saved');
+
+      if (!profileBtn || !modal || !form) return;
+
+      function openModal() {
+        modal.classList.remove('hidden');
+        modal.classList.add('flex');
+
+        // Load saved data
         try {
-          const embedded = document.querySelector('img[src^="data:image/png;base64"]');
-          if (!embedded) return;
-          const data = embedded.src;
-          document.querySelectorAll('img[data-logo="farmaa"]').forEach((img) => {
-            img.src = data;
-          });
+          const raw = localStorage.getItem('farmaaProfile');
+          if (raw) {
+            const data = JSON.parse(raw);
+            document.getElementById('profile-name').value =
+              data.name || '';
+            document.getElementById('profile-phone').value =
+              data.phone || '';
+            document.getElementById('profile-email').value =
+              data.email || '';
+            document.getElementById('profile-address').value =
+              data.address || '';
+          }
         } catch (e) {
-          console.error('Failed to populate embedded logos', e);
+          console.error('Failed to read profile from storage', e);
         }
-      })();
-    </script>
-    </body>
-  </html>
-  
+      }
+
+      function closeModal() {
+        modal.classList.add('hidden');
+        modal.classList.remove('flex');
+        if (savedMsg) savedMsg.classList.add('hidden');
+      }
+
+      profileBtn.addEventListener('click', openModal);
+      if (closeBtn) closeBtn.addEventListener('click', closeModal);
+      modal.addEventListener('click', (e) => {
+        if (e.target === modal) closeModal();
+      });
+
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        const profile = {
+          name: document.getElementById('profile-name').value.trim(),
+          phone: document.getElementById('profile-phone').value.trim(),
+          email: document.getElementById('profile-email').value.trim(),
+          address: document
+            .getElementById('profile-address')
+            .value.trim(),
+        };
+
+        try {
+          localStorage.setItem('farmaaProfile', JSON.stringify(profile));
+          if (savedMsg) savedMsg.classList.remove('hidden');
+        } catch (err) {
+          alert('Unable to save profile data in this browser.');
+        }
+      });
+    })();
+  </script>
+  <script>
+    (function () {
+      // Copy embedded base64 header logo to other logo placeholders
+      try {
+        const embedded = document.querySelector('img[src^="data:image/png;base64"]');
+        if (!embedded) return;
+        const data = embedded.src;
+        document.querySelectorAll('img[data-logo="farmaa"]').forEach((img) => {
+          img.src = data;
+        });
+      } catch (e) {
+        console.error('Failed to populate embedded logos', e);
+      }
+    })();
+  </script>
+</body>
+
+</html>
